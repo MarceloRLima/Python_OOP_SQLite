@@ -1,13 +1,13 @@
 import sqlite3
 
-class Database:
+class BaseDados:
     #Atributos
     conexao = None
     cursor = None
 
     #Método construtor
     def __init__(self):
-        self.conexao = sqlite3.connect("database/imdb.db")
+        self.conexao = sqlite3.connect("basedados/imdb.db")
         self.cursor = self.conexao.cursor()
 
     def __del__(self):
